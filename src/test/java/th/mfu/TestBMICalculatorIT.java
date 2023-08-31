@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class TestBMICalculatorIT {
     private static Client client;
     private static Logger _logger = LoggerFactory.getLogger(TestBMICalculatorIT.class);
-    private static String WEB_URI = "http://localhost:8080/bmi/calculate.jsp";
+    private static String WEB_URI = "http://localhost:8080/calbmi";
 
     @BeforeClass
     public static void createClient() {
@@ -45,7 +45,7 @@ public class TestBMICalculatorIT {
             String jsonResponse = response.readEntity(String.class);
             assertThat(jsonResponse, CoreMatchers.containsString("Result is 31"));
 
-            assertThat(jsonResponse, CoreMatchers.containsString("According to your BMI, you are considered obese"));
+            assertThat(jsonResponse, CoreMatchers.containsString("obese"));
             _logger.info("IT1 test passed");
         }
     }
@@ -64,7 +64,7 @@ public class TestBMICalculatorIT {
             String jsonResponse = response.readEntity(String.class);
             assertThat(jsonResponse, CoreMatchers.containsString("Result is 22"));
 
-            assertThat(jsonResponse, CoreMatchers.containsString("According to your BMI, you are considered normal"));
+            assertThat(jsonResponse, CoreMatchers.containsString("normal"));
             _logger.info("IT1 test passed");
         }
     }

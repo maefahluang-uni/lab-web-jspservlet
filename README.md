@@ -4,8 +4,16 @@ This lab demonstrate how to develop basic web application using JSP. The project
 ## Exercise 1 - BMI Calculator
 This program helps to calculate bmi by given weight and height. The program should also determine if the built is normal, underweight, overweight, etc., based on given figure in calculate.jsp in webapp/bmi
 1. complete the `index.html` with two textfields for weight and height. 
-2. the form's action should be properly pointed to the right jsp to calculate BMI. The BMI should be integer number without any decimal points.
-3. compelte `calculate.jsp` to calculate BMI based on given parameters, also determine the built type.
+2. the form's action should be properly pointed to the servlet to calculate BMI. 
+3. complete BMICalculatorServlet, BMI should be integer number without any decimal points (You can use `Math.round()` function).
+4. The servlet should determine the built type based on the given BMI as following:
+    - BMI < 18.5 : underweight
+    - 18.5 <= BMI < 25 : normal
+    - 25 <= BMI < 30 : overweight
+    - 30 <= BMI < 35 : obese
+    - BMI >= 35 : extremely obese
+5. add bmi and built type to the request attributes.
+3. compelte `bmi_result.jsp` to show bmi and built type from the request attributes.
 
 
 ## Exercise 2 - Create Integration Testing for JSP
