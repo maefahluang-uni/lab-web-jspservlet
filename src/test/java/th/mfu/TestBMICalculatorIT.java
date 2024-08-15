@@ -50,7 +50,7 @@ public class TestBMICalculatorIT {
         }
     }
 
-    //TODO: add another test case for normal built such as weight=50 and height=1.5.
+    //add another test case for normal built such as weight=50 and height=1.5.
     @Test
     public void testCaclulate2() {
 
