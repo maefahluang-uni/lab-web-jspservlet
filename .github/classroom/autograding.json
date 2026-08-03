@@ -1,13 +1,14 @@
 {
   "tests": [
-   {
-      "name": "test web",
+    {
+      "name": "Test BMI calculator",
       "setup": "",
-      "run": "mvn verify --file pom.xml",
+      "run": "mvn -B verify --file pom.xml",
       "input": "",
       "output": "",
-      "timeout": 3,
+      "comparison": "included",
+      "timeout": 10,
       "points": 3
     }
-   ]
+  ]
 }
