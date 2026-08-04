@@ -1,0 +1,21 @@
+name: Autograde
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Test BMI calculator (3 points)
+        run: mvn -B verify --file pom.xml
